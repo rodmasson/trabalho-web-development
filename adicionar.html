@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+      <title>Adicionar Despesa</title>
+      <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Adicionar Despesa</h1>
+        <form method="POST">
+            <fieldset>
+                <label for="data">Data:</label>
+                <input type="date" name="data" required>
+            </fieldset>
+           
+            <fieldset>
+                    <label for="tipo">Tipo:</label>
+                    <select name="tipo" required>
+                        <option value="">--Selecione--</option>
+                        <option value="1">Alimentação</option>
+                        <option value="2">Saúde</option>
+                        <option value="3">Transporte</option>
+                        <option value="4">Despesas Fixa</option>
+                    </select>
+            </fieldset>
+
+            <fieldset>
+                    <label for="descricao">Descrição:</label>
+                    <input type="text" name="descricao" required>
+            </fieldset>
+
+            <fieldset>
+                    <label for="valor">Valor: R$</label>
+                    <input type="number" name="valor" required>
+            </fieldset>
+
+            <fieldset>
+                    <input type="submit" value="Adicionar despesa">
+            </fieldset>
+
+        </form>
+
+ 
+    </body>
+
+</html>
