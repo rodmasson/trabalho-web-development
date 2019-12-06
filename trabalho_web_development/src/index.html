@@ -47,7 +47,7 @@
         <button type="button" class="btn btn-outline-success" id="btn-create">Criar</button>
         <button type="button" class="btn btn-outline-primary" id="btn-read">Carregar</button>
         <button type="button" class="btn btn-outline-warning" id="btn-update">Atualizar</button>
-        <button type="button" class="btn btn-outline-danger"  id="btn-delete">Excluir Tudo</button>
+        <button type="button" class="btn btn-outline-danger" disabled  id="btn-delete">Excluir Tudo</button>
     </div>
 
     <div class="container d-flex">
@@ -90,6 +90,20 @@
                       </tr>
                     </tbody>
                   </table>
+    </div>
+    
+    <div class ="cointainer text-center">
+      <div id ="notfound"></div>
+    </div>
+    
+    <div class="w-100 btn btn-success insertmsg">
+        "Registro inserido com sucesso!!!"
+    </div>
+    <div class="w-100 btn btn-warning updatemsg">
+        "Registro atualizado com sucesso!!!"
+    </div>
+    <div class="w-100 btn btn-danger deletemsg">
+      "Registro excluído com sucesso!!!"
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
