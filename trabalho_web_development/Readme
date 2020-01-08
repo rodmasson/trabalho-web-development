@@ -1,5 +1,5 @@
 O sistema foi executado através de uma extensão instalado no Visual Studio Code.
 
 1- Instalar a extensão Live Server.
-2 - Clicar com o botao direito no index.html e selecionar Open with Live Server (Alt+L Alt+O)
+2- Clicar com o botao direito no index.html e selecionar Open with Live Server (Alt+L Alt+O)
 3- Os dados serão inseridos no IndexDB.
