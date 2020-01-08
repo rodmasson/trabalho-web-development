@@ -23,17 +23,14 @@ table .btndelete{
 
 /* messages */
 .insertmsg,
-
 .updatemsg,
-
 .deletemsg{
     position: absolute;
-    top: -40px;
-    
+    top:-40px;
 }
 
-.movedown {
-    animation: slideup 3.4s ease;
+.movedown{
+    animation: slideup 3.4s linear;
 }
 
 @keyframes slideup{
@@ -43,4 +40,4 @@ table .btndelete{
     100%{
         top: -40px;
     }
-}
+} 

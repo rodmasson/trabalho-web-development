@@ -32,19 +32,20 @@ btncreate.onclick=(event)=>{
         preco:      preco.value 
     });
 
-    proname.value    = "";
-    fabricante.value = "";
-    preco.value      = "";
+    proname.value = fabricante.value = preco.value = "";
+
+    
+    notfound.textContent = "";
 
     getData(db.itens,(data) => {
-      userid.value = data.id + 1 || 1;
+      userid.value = data.id + 1||1;
     });
 
     table();
-
+    
     let insertmsg = document.querySelector(".insertmsg");
 
-    getMSG(flag,insertmsg);
+    getMsg(flag,insertmsg);
 }
 
 //create event on btn read
@@ -60,20 +61,32 @@ btnupdate.onclick = () =>{
             fabricante: fabricante.value,
             preco:      preco.value   
         }).then ((updated)=>{
-            let get = updated ? 'Registro atualizado com sucesso' : 'Registro não atualizado';
-            console.log(get)
+            let get = updated ? true: false;
+
+            let updatemsg =  document.querySelector(".updatemsg");
+            
+            getMsg(get,updatemsg);
+            proname.value = fabricante.value = preco.value = "";
+
         })
+
+        table();
     }
 }
 
 // delete event on btn delete
-btndelete.onclick =()=>{
-    db.delete();
-    db = productdb("myDB",{
-        itens:`++id,produto,fabricante,preco`
-    });
-    db.open();
-    table();
+btndelete.confirm =()=>{
+    
+    // db.delete();
+    // db = productdb("myDB",{
+    //     itens:`++id,produto,fabricante,preco`
+    // });
+    // db.open();
+    // table();
+    // textID(userid);
+
+    // let deletemsg =  document.querySelector(".deletemsg");
+    // getMsg(true,deletemsg)
 }
 
 //window onload table
@@ -146,15 +159,19 @@ function deletebtn(event){
         fabricante.value = data.fabricante || "";
         preco.value = data.preco || 0;
     })
+    
+    let deletemsg =  document.querySelector(".deletemsg");
+    getMsg(true,deletemsg)
+    table();
 }
 
-function getMSG (flag,element){
+function getMsg (flag,element){
     if(flag){
-        element.className += "movedown";
+        element.className += " movedown";
 
         setTimeout(()=>{
             element.classList.forEach(classname => {
-                classname =="movedown" ? undefined: element.classList.remove("movedown");
+                classname=="movedown"?undefined:element.classList.remove("movedown");
             });
         },4000);
     }

@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Cadastro Itens</title>
 
         <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     
         <!--Icons-->
-    <script src="https://kit.fontawesome.com/c587ee198a.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -47,7 +49,7 @@
         <button type="button" class="btn btn-outline-success" id="btn-create">Criar</button>
         <button type="button" class="btn btn-outline-primary" id="btn-read">Carregar</button>
         <button type="button" class="btn btn-outline-warning" id="btn-update">Atualizar</button>
-        <button type="button" class="btn btn-outline-danger" disabled  id="btn-delete">Excluir Tudo</button>
+        <button type="button" class="btn btn-outline-danger" id="btn-delete">Excluir Tudo</button>
     </div>
 
     <div class="container d-flex">
@@ -63,30 +65,6 @@
                       </tr>
                     </thead>
                     <tbody id="tbody">
-                      <!-- <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td><i class="fas fa-edit btnedit"</td>
-                        <td><i class="fas fa-trash-alt btndelete"</td></i>
-
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td><i class="fas fa-edit btnedit"</td>
-                        <td><i class="fas fa-trash-alt btndelete"</td></i>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td><i class="fas fa-edit btnedit"</td>
-                        <td><i class="fas fa-trash-alt btndelete"</td></i> -->
                       </tr>
                     </tbody>
                   </table>
@@ -96,15 +74,25 @@
       <div id ="notfound"></div>
     </div>
     
-    <div class="w-100 btn btn-success insertmsg">
-        "Registro inserido com sucesso!!!"
+    <div class="w-100 btn btn-success insertmsg">Registro inserido com sucesso!!!</div>
+    <div class="w-100 btn btn-warning updatemsg">Registro atualizado com sucesso!!!</div>
+    <div class="w-100 btn btn-danger deletemsg">Registro excluído com sucesso!!!</div>
+
+    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Deseja realmente excluir o registro?</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" id="btnNao" data-dismiss="modal">Não</button>
+        <button type="button" class="btn btn-outline-success" id="btnSim">Sim
+        </button>
+      </div>
     </div>
-    <div class="w-100 btn btn-warning updatemsg">
-        "Registro atualizado com sucesso!!!"
-    </div>
-    <div class="w-100 btn btn-danger deletemsg">
-      "Registro excluído com sucesso!!!"
-    </div>
+  </div>
+</div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
